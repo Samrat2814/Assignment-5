@@ -23,33 +23,188 @@
   </head>
   <body>
     <!-- header section start -->
-    <header class="bg-[#F9F7F3]" `>
-      <nav class="flex justify-between items-center pt-6 pb-24 ml-32 mr-32">
-        <div>
+    <header
+      class="bg-[#F9F7F3] static lg:sticky top-0 bg-opacity-95 border border-b-gray-300"
+    >
+      <nav
+        class="flex flex-col lg:flex-row justify-between items-center pt-6 pb-6 px-4 lg:px-32"
+      >
+        <div class="mb-4 lg:mb-0">
           <button
-            class="bg-[#B4F461] py-3 px-8 rounded-lg text-xl font-semibold"
+            class="bg-[#B4F461] py-2 px-6 rounded-lg text-base lg:py-3 lg:px-8 lg:text-xl font-semibold"
           >
             Blog
           </button>
         </div>
-        <div class="flex gap-2 items-center">
-          <div class="w-7"><img src="assets/logo.png" alt="" /></div>
-          <div><h1 class="text-xl font-semibold">Donate Bangladesh</h1></div>
+        <div
+          class="flex flex-col lg:flex-row gap-2 items-center mb-4 lg:mb-0 text-center"
+        >
+          <div class="w-10 lg:w-7">
+            <img src="assets/logo.png" alt="Logo" />
+          </div>
+          <h1 class="text-lg lg:text-xl font-semibold">Donate Bangladesh</h1>
         </div>
         <div class="flex items-center gap-2">
-          <div class="w-7"><img src="assets/coin.png" alt="" /></div>
-          <div>
-            <h1 class="text-gray-500"><span>5500</span>BDT</h1>
+          <div class="w-10 lg:w-7">
+            <img src="assets/coin.png" alt="Coin" />
           </div>
+          <h1 class="text-gray-500 text-base lg:text-xl">
+            <span id="4">5500</span>BDT
+          </h1>
         </div>
       </nav>
+      <div
+        class="flex flex-col lg:flex-row justify-center gap-4 pb-6 lg:pb-12 px-4 lg:px-0"
+      >
+        <button
+          class="text-base lg:text-xl font-semibold bg-[#B4F461] rounded-lg py-3 px-6 lg:py-4 lg:px-8"
+        >
+          Donation
+        </button>
+        <button
+          class="text-base lg:text-xl font-semibold rounded-lg py-3 px-6 lg:py-4 lg:px-8 border border-gray-500"
+        >
+          History
+        </button>
+      </div>
     </header>
     <!-- header section end -->
 
     <!-- main section start -->
-    <main>
-      
+    <main class="ml-4 mr-4 lg:ml-32 lg:mr-32">
+      <!-- card section 1 -->
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-4 lg:mt-8 p-4 lg:p-8 border border-gray-200"
+      >
+        <div class="w-full lg:w-auto">
+          <img
+            src="assets/noakhali.png"
+            alt="Flood at Noakhali"
+            class="w-full lg:w-auto"
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1
+            class="px-2 py-1 lg:px-4 lg:py-2 bg-gray-300 rounded-lg w-20 lg:w-24 text-sm lg:text-base"
+          >
+            <span id="3">0</span> BDT
+          </h1>
+          <h1 class="text-lg lg:text-xl font-bold">
+            Donate for Flood at Noakhali, Bangladesh
+          </h1>
+          <p
+            class="font-light text-gray-500 text-sm lg:text-base w-full lg:w-96"
+          >
+            The recent floods in Noakhali have caused significant damage to
+            homes and infrastructure. Your donation will help provide essential
+            supplies to those affected by this disaster. Every contribution, big
+            or small, makes a difference. Please join us in supporting the
+            relief efforts and making a positive impact on the lives of those in
+            need.
+          </p>
+          <input
+            id="2"
+            class="py-2 lg:py-3 px-2 border border-gray-300 rounded-xl w-full"
+            type="text"
+            placeholder="Write donation amount"
+          />
+          <button
+            id="1"
+            class="w-full bg-[#B4F461] py-2 lg:py-3 px-4 lg:px-8 rounded-xl font-semibold text-sm lg:text-xl"
+          >
+            Donate Now
+          </button>
+        </div>
+      </div>
+      <!-- card section 2 -->
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-4 lg:mt-8 p-4 lg:p-8 border border-gray-200"
+      >
+        <div class="w-full lg:w-auto">
+          <img
+            src="assets/feni.png"
+            alt="Flood Relief in Feni"
+            class="w-full lg:w-auto"
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1
+            class="px-2 py-1 lg:px-4 lg:py-2 bg-gray-300 rounded-lg w-24 text-sm lg:text-base"
+          >
+            <span id="7">0</span> BDT
+          </h1>
+          <h1 class="text-lg lg:text-xl font-bold">
+            Donate for Flood Relief in Feni, Bangladesh
+          </h1>
+          <p
+            class="font-light text-gray-500 text-sm lg:text-base w-full lg:w-96"
+          >
+            The recent floods in Feni have devastated local communities, leading
+            to severe disruption and loss. Your generous donation will help
+            provide immediate aid, including food, clean water, and medical
+            supplies, to those affected by this calamity. Every contribution
+            counts towards making a real difference.
+          </p>
+          <input
+            id="6"
+            class="py-2 lg:py-3 px-2 border border-gray-300 rounded-xl w-full"
+            type="text"
+            placeholder="Write donation amount"
+          />
+          <button
+            id="5"
+            class="w-full bg-[#B4F461] py-2 lg:py-3 px-4 lg:px-8 rounded-xl font-semibold text-sm lg:text-xl"
+          >
+            Donate Now
+          </button>
+        </div>
+      </div>
+      <!-- card section 3 -->
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-4 lg:mt-8 p-4 lg:p-8 border border-gray-200"
+      >
+        <div class="w-full lg:w-auto">
+          <img
+            src="assets/quota-protest.png"
+            alt="Quota Movement"
+            class="w-full lg:w-auto"
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1
+            class="px-2 py-1 lg:px-4 lg:py-2 bg-gray-300 rounded-lg w-20 text-sm lg:text-base"
+          >
+            <span id="10">0</span> BDT
+          </h1>
+          <h1 class="text-lg lg:text-xl font-bold">
+            Aid for Injured in the Quota Movement
+          </h1>
+          <p
+            class="font-light text-gray-500 text-sm lg:text-base w-full lg:w-96"
+          >
+            The recent Quota movement has resulted in numerous injuries and
+            significant hardship for many individuals. Your support is crucial
+            in providing medical assistance, rehabilitation, and necessary
+            supplies to those affected. By contributing, you help ensure that
+            injured individuals receive the care and support they need during
+            this challenging time.
+          </p>
+          <input
+            id="9"
+            class="py-2 lg:py-3 px-2 border border-gray-300 rounded-xl w-full"
+            type="text"
+            placeholder="Write donation amount"
+          />
+          <button
+            id="8"
+            class="w-full bg-[#B4F461] py-2 lg:py-3 px-4 lg:px-8 rounded-xl font-semibold text-sm lg:text-xl"
+          >
+            Donate Now
+          </button>
+        </div>
+      </div>
     </main>
     <!-- main section end -->
+    <script src="index.js"></script>
   </body>
 </html>
