@@ -1,5 +1,3 @@
-
-
 document.getElementById("1").addEventListener("click", function () {
   const donateInputField = document.getElementById("2");
   const donateInput = parseFloat(donateInputField.value.trim());
@@ -30,7 +28,9 @@ document.getElementById("1").addEventListener("click", function () {
   // Calculate the remaining amount
   remainingAmount -= donateInput;
   remainingAmountElement.innerText = remainingAmount.toFixed(2);
-  donateInputField.value = ""; // Clear input after success
+  donateInputField.value = ""; 
+
+  document.getElementById("my_modal_5").showModal();
 });
 
 document.getElementById("5").addEventListener("click", function () {
@@ -63,7 +63,9 @@ document.getElementById("5").addEventListener("click", function () {
   // Calculate the remaining amount
   remainingAmount -= donateInput;
   remainingAmountElement.innerText = remainingAmount.toFixed(2);
-  donateInputField.value = ""; // Clear input after success
+  donateInputField.value = ""; 
+
+  document.getElementById("my_modal_5").showModal();
 });
 
 document.getElementById("8").addEventListener("click", function () {
@@ -96,5 +98,7 @@ document.getElementById("8").addEventListener("click", function () {
   // Calculate the remaining amount
   remainingAmount -= donateInput;
   remainingAmountElement.innerText = remainingAmount.toFixed(2);
-  donateInputField.value = ""; 
+  donateInputField.value = "";
+
+  document.getElementById("my_modal_5").showModal();
 });
