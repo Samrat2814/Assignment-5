@@ -139,6 +139,8 @@ document.getElementById("8").addEventListener("click", function () {
 document.getElementById("11").addEventListener("click", function () {
   const hiddenAdd = document.getElementById("13");
   hiddenAdd.classList.add("hidden");
+  const hiddenFooter = document.getElementById("20");
+  hiddenFooter.classList.remove("hidden");
   this.style.backgroundColor = "#B4F461";
   const donationBtn = document.getElementById("12");
   donationBtn.style.backgroundColor = "#F4F4F4";
