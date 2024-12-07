@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello its me</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>QNA</title>
+  </head>
+  <body>
+    <header
+      class="bg-[#F9F7F3] static lg:sticky top-0 bg-opacity-95 border border-b-gray-300"
+    >
+      <nav
+        class="flex flex-col lg:flex-row justify-between items-center pt-6 pb-6 px-4 lg:px-32"
+      >
+        <div class="mb-4 lg:mb-0">
+          <button
+            class="bg-[#B4F461] py-2 px-6 rounded-lg text-base lg:py-3 lg:px-8 lg:text-xl font-semibold"
+          >
+            <a href="./index.html">Home</a>
+          </button>
+        </div>
+        <div
+          class="flex flex-col lg:flex-row gap-2 items-center mb-4 lg:mb-0 text-center"
+        >
+          <div class="w-10 lg:w-7">
+            <img src="assets/logo.png" alt="Logo" />
+          </div>
+          <h1 class="text-lg lg:text-xl font-semibold">Donate Bangladesh</h1>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-10 lg:w-7">
+            <img src="assets/coin.png" alt="Coin" />
+          </div>
+          <h1 class="text-gray-500 text-base lg:text-xl">
+            <span id="4">5500</span>BDT
+          </h1>
+        </div>
+      </nav>
+    </header>
+    <main class="mx-4 sm:mx-8 lg:mx-36">
+      <div class="mt-4 sm:mt-8 flex flex-col gap-4 sm:gap-6">
+        <!-- 1 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border rounded-md"
+        >
+          <div class="collapse-title text-base sm:text-lg font-medium">
+            Q: What is the DOM in JavaScript?
+          </div>
+          <div class="collapse-content text-sm sm:text-base">
+            <p>
+              A: The Document Object Model (DOM) is a programming interface for
+              web documents. It represents the structure of a webpage as a tree
+              of objects that can be manipulated with JavaScript.
+            </p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border rounded-md"
+        >
+          <div class="collapse-title text-base sm:text-lg font-medium">
+            Q: What is the difference between innerHTML and textContent?
+          </div>
+          <div class="collapse-content text-sm sm:text-base">
+            <p>
+              A: <br />
+              1. innerHTML can set or get HTML content. <br />
+              2. textContent sets or gets plain text, ignoring HTML tags.
+            </p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border rounded-md"
+        >
+          <div class="collapse-title text-base sm:text-lg font-medium">
+            Q: How can you append an element to the DOM?
+          </div>
+          <div class="collapse-content text-sm sm:text-base">
+            <p>
+              A: <br />
+              Use parentElement.appendChild(childElement). <br />
+              Example: <br />
+              <b>
+                const parent = document.getElementById("container"); <br />
+                const child = document.createElement("p"); <br />
+                parent.appendChild(child);
+              </b>
+            </p>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border rounded-md"
+        >
+          <div class="collapse-title text-base sm:text-lg font-medium">
+            Q: How do you update the text content of an element?
+          </div>
+          <div class="collapse-content text-sm sm:text-base">
+            <p>
+              A: <br />
+              Use the .textContent property. <br />
+              Example: <br />
+              <b>
+                const element = document.getElementById("myId"); <br />
+                element.textContent = "Updated Text";
+              </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
