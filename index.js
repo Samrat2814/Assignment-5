@@ -1,20 +1,21 @@
+// // Common Function for Validation
+function validateDonation(inputField) {
+  const value = inputField.value.trim();
+  const numberValue = parseFloat(value);
+
+  if (value === "" || isNaN(numberValue) || numberValue <= 0) {
+    alert("Please provide a valid numeric input greater than zero.");
+    return null;
+  }
+
+  return numberValue;
+}
+
+// Event Listeners
 document.getElementById("1").addEventListener("click", function () {
   const donateInputField = document.getElementById("2");
-  const donateInput = parseFloat(donateInputField.value.trim());
-
-  // Validate input
-  if (donateInputField.value.trim() === "") {
-    alert("Input cannot be empty. Please provide a valid input.");
-    return;
-  }
-  if (isNaN(donateInput) || typeof donateInput !== "number") {
-    alert("Please provide a valid numeric input.");
-    return;
-  }
-  if (donateInput <= 0) {
-    alert("Donation amount must be greater than zero.");
-    return;
-  }
+  const donateInput = validateDonation(donateInputField);
+  if (donateInput === null) return;
 
   const donateAmountElement = document.getElementById("3");
   const currentAmount = parseFloat(donateAmountElement.innerText);
@@ -24,7 +25,6 @@ document.getElementById("1").addEventListener("click", function () {
   // Update the donation amount
   const newAmount = currentAmount + donateInput;
   donateAmountElement.innerText = newAmount.toFixed(2);
-  console.log(newAmount);
 
   // Calculate the remaining amount
   remainingAmount -= donateInput;
@@ -46,21 +46,8 @@ document.getElementById("1").addEventListener("click", function () {
 
 document.getElementById("5").addEventListener("click", function () {
   const donateInputField = document.getElementById("6");
-  const donateInput = parseFloat(donateInputField.value.trim());
-
-  // Validate input
-  if (donateInputField.value.trim() === "") {
-    alert("Input cannot be empty. Please provide a valid input.");
-    return;
-  }
-  if (isNaN(donateInput) || typeof donateInput !== "number") {
-    alert("Please provide a valid numeric input.");
-    return;
-  }
-  if (donateInput <= 0) {
-    alert("Donation amount must be greater than zero.");
-    return;
-  }
+  const donateInput = validateDonation(donateInputField);
+  if (donateInput === null) return;
 
   const donateAmountElement = document.getElementById("7");
   const currentAmount = parseFloat(donateAmountElement.innerText);
@@ -92,21 +79,8 @@ document.getElementById("5").addEventListener("click", function () {
 
 document.getElementById("8").addEventListener("click", function () {
   const donateInputField = document.getElementById("9");
-  const donateInput = parseFloat(donateInputField.value.trim());
-
-  // Validate input
-  if (donateInputField.value.trim() === "") {
-    alert("Input cannot be empty. Please provide a valid input.");
-    return;
-  }
-  if (isNaN(donateInput) || typeof donateInput !== "number") {
-    alert("Please provide a valid numeric input.");
-    return;
-  }
-  if (donateInput <= 0) {
-    alert("Donation amount must be greater than zero.");
-    return;
-  }
+  const donateInput = validateDonation(donateInputField);
+  if (donateInput === null) return;
 
   const donateAmountElement = document.getElementById("10");
   const currentAmount = parseFloat(donateAmountElement.innerText);
@@ -136,6 +110,7 @@ document.getElementById("8").addEventListener("click", function () {
   document.getElementById("my_modal_5").showModal();
 });
 
+// Toggle Sections
 document.getElementById("11").addEventListener("click", function () {
   const hiddenAdd = document.getElementById("13");
   hiddenAdd.classList.add("hidden");
@@ -149,9 +124,8 @@ document.getElementById("11").addEventListener("click", function () {
 document.getElementById("12").addEventListener("click", function () {
   const hiddenAdd = document.getElementById("13");
   hiddenAdd.classList.remove("hidden");
-  (this.style.backgroundColor = "#B4F461"), "border";
+  this.style.backgroundColor = "#B4F461";
   const donationBtn = document.getElementById("11");
   donationBtn.style.backgroundColor = "#F4F4F4";
 });
-
 
